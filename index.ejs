@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Liz Preciado - Fincas Colombianas de Lujo | Retiros Premium en el Campo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="/" class="logo">Liz Preciado</a>
+            
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#fincas" data-translate="luxuryFincas">Fincas de Lujo</a></li>
+                    <li><a href="#experiences" data-translate="experiences">Experiencias</a></li>
+                    <li><a href="#gallery" data-translate="gallery">Galería</a></li>
+                    <li><a href="#testimonials" data-translate="testimonials">Testimonios</a></li>
+                    <li><a href="#about" data-translate="about">Acerca de</a></li>
+                    <li><a href="/contact" class="cta-nav" data-translate="bookNow">Reservar Ahora</a></li>
+                </ul>
+            </nav>
+
+            <div class="contact-info">
+                <div><span data-translate="whatsappLabel">WhatsApp:</span> +1 617 609 9623</div>
+                <div class="email">lizzpreciado2012@gmail.com</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero-section">
+        <!-- YouTube Video Background -->
+        <div class="video-background">
+            <iframe 
+                src="https://www.youtube.com/embed/2_9Lftze-6o?autoplay=1&mute=1&loop=1&playlist=2_9Lftze-6o&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&start=0"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Video Overlay -->
+        <div class="video-overlay"></div>
+
+        <!-- Floating Elements for Luxury Feel -->
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content fade-in">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/" data-translate="breadcrumbHome">Inicio</a>
+                <span>></span>
+                <a href="#" data-translate="breadcrumbColombia">Colombia</a>
+                <span>></span>
+                <span data-translate="breadcrumbMedellin">Medellín</span>
+            </nav>
+
+            <!-- Main Title -->
+            <h1 class="hero-title" data-translate="heroTitle">Fincas Colombianas de Lujo</h1>
+            <h2 class="hero-subtitle" data-translate="heroSubtitle">creadas para tus sueños</h2>
+            
+            <!-- Description -->
+            <p class="hero-description" data-translate="heroDescription">
+                Descubre retiros campestres impresionantes en las ubicaciones más exclusivas de Medellín. 
+                Experimenta la auténtica hospitalidad colombiana con lujo y comodidad sin paralelo.
+            </p>
+
+            <!-- Premium CTA Buttons -->
+            <div class="hero-cta-group">
+                <a href="#fincas" class="cta-primary" data-translate="ctaExplore">Explorar Fincas de Lujo</a>
+                <a href="https://wa.me/16176099623" class="cta-secondary" target="_blank">
+                    <span>💬</span> <span data-translate="ctaWhatsapp">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span data-translate="scrollToExplore">Desplázate para Explorar</span>
+            <div class="scroll-arrow"></div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="hero-nav">
+            <div class="hero-nav-container">
+                <button class="hero-nav-item active" data-translate="premiumFincas">Fincas Premium</button>
+                <button class="hero-nav-item" data-translate="luxuryAmenities">Amenidades de Lujo</button>
+                <button class="hero-nav-item" data-translate="exclusiveLocations">Ubicaciones Exclusivas</button>
+                <button class="hero-nav-item" data-translate="customExperiences">Experiencias Personalizadas</button>
+                <button class="hero-nav-item" data-translate="eventPlanning">Planificación de Eventos</button>
+                <button class="hero-nav-item" data-translate="conciergeServices">Servicios de Conserjería</button>
+                <button class="hero-nav-item" data-translate="privateTours">Tours Privados</button>
+                <button class="hero-nav-item" data-translate="vipPackages">Paquetes VIP</button>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="featured-section" id="fincas">
+        <div class="container">
+            <h2 class="section-title" data-translate="exclusiveCollection">Nuestra Colección Exclusiva</h2>
+            <p class="section-subtitle" data-translate="exclusiveCollectionDesc">Fincas de lujo seleccionadas en las ubicaciones más prestigiosas de Colombia</p>
+            
+            <div class="properties-grid">
+                <% if (properties && properties.length > 0) { %>
+                    <% properties.forEach(property => { %>
+                        <div class="property-card">
+                            <% if (property.image_url) { %>
+                                <img src="<%= property.image_url %>" alt="<%= property.title %>" class="property-image">
+                            <% } else { %>
+                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&w=600" alt="<%= property.title %>" class="property-image">
+                            <% } %>
+                            <div class="property-info">
+                                <h3 class="property-title"><%= property.title %></h3>
+                                <p class="property-location">📍 <%= property.location %></p>
+                                <p class="property-description"><%= property.description %></p>
+                                <% if (property.amenities) { %>
+                                    <div class="property-amenities">
+                                        <% property.amenities.split(',').slice(0, 3).forEach(amenity => { %>
+                                            <span class="amenity-tag"><%= amenity.trim() %></span>
+                                        <% }); %>
+                                    </div>
+                                <% } %>
+                                <div class="property-details">
+                                    <% if (property.bedrooms) { %>
+                                        <span>🛏️ <%= property.bedrooms %> <span data-translate="beds">camas</span></span>
+                                    <% } %>
+                                    <% if (property.bathrooms) { %>
+                                        <span>🚿 <%= property.bathrooms %> <span data-translate="baths">baños</span></span>
+                                    <% } %>
+                                    <% if (property.area) { %>
+                                        <span>📐 <%= property.area %>m²</span>
+                                    <% } %>
+                                </div>
+                                <% if (property.price) { %>
+                                    <div class="property-price">$<%= property.price.toLocaleString() %> COP/<span data-translate="night">noche</span></div>
+                                <% } %>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Liz Preciado</h3>
+                    <p data-translate="footerTagline">Fincas Colombianas de Lujo</p>
+                    <p data-translate="footerDescription">Tu puerta de entrada al lujo auténtico en el campo colombiano.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="contactTitle">Contacto</h4>
+                    <p>📱 <span data-translate="whatsappLabel">WhatsApp:</span> +1 617 609 9623</p>
+                    <p>📧 lizzpreciado2012@gmail.com</p>
+                    <p>📍 Medellín, Colombia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-translate="footerCopyright">Fincas de Liz Preciado. Todos los derechos reservados.</span> | Medellín, Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/translations.js"></script>
+</body>
+</html>
