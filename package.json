@@ -1,11 +1,6 @@
 {
-  "name": "liz-preciado-fincas",
-  "version": "1.0.0",
-  "description": "Luxury Colombian Fincas website",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "ejs": "^3.1.10",
@@ -13,8 +8,5 @@
     "multer": "^2.0.1",
     "nodemailer": "^7.0.3",
     "sqlite3": "^5.1.7"
-  },
-  "engines": {
-    "node": "18.x"
   }
 }
