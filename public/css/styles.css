@@ -40,7 +40,7 @@ body {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-weight: 500;
     color: white;
     text-decoration: none;
@@ -265,7 +265,7 @@ body {
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.6;
     max-width: 500px;
     margin-bottom: 3rem;
@@ -287,11 +287,12 @@ body {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     letter-spacing: 0.5px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    min-height: 44px; /* Better touch target */
 }
 
 .cta-primary {
@@ -403,6 +404,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
+    min-height: 44px; /* Better touch target */
 }
 
 .hero-nav-item:hover,
@@ -426,14 +428,14 @@ body {
 .section-title {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
     color: #2c3e50;
 }
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: #666;
     margin-bottom: 4rem;
     max-width: 600px;
@@ -443,7 +445,7 @@ body {
 
 .properties-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -472,7 +474,7 @@ body {
 }
 
 .property-title {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     margin-bottom: 0.5rem;
     color: #2c3e50;
     font-family: 'Playfair Display', serif;
@@ -488,6 +490,7 @@ body {
     color: #555;
     margin-bottom: 1rem;
     line-height: 1.5;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .property-amenities {
@@ -511,10 +514,11 @@ body {
     margin-bottom: 1rem;
     font-size: 0.9rem;
     color: #666;
+    flex-wrap: wrap;
 }
 
 .property-price {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
     font-weight: bold;
     color: #d4a574;
     font-family: 'Playfair Display', serif;
@@ -552,11 +556,74 @@ body {
     opacity: 0.8;
 }
 
-/* Responsive Design */
+/* Mobile-First Responsive Design */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-cta-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-primary, .cta-secondary {
+        padding: 1rem 2rem;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .floating-element {
+        display: none; /* Hide decorative elements on mobile */
+    }
+}
+
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 0 1.5rem;
     }
     
     .nav-menu {
@@ -567,10 +634,11 @@ body {
     
     .contact-info {
         text-align: center;
+        font-size: 0.85rem;
     }
     
     .hero-content {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         text-align: left;
     }
     
@@ -580,14 +648,48 @@ body {
     
     .hero-nav-item {
         min-width: 100%;
+        padding: 1.2rem 1rem;
     }
     
     .properties-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .hero-cta-group {
         flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-primary, .cta-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .featured-section {
+        padding: 4rem 0;
+    }
+    
+    .scroll-indicator {
+        bottom: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content {
+        padding: 0 1.5rem;
+    }
+    
+    .properties-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
