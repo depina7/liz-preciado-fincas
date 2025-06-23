@@ -148,7 +148,7 @@ app.post('/contact', (req, res) => {
   );
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Liz Preciado's Fincas website running on http://localhost:${PORT}`);
-  console.log(`📱 Visit http://localhost:${PORT} to see your website`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Liz Preciado's Fincas website running on port ${PORT}`);
+  console.log(`📱 Visit to see your website`);
 });
