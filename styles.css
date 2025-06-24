@@ -129,9 +129,9 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Changed to flex-start */
     justify-content: flex-start;
-    padding-bottom: 120px; /* Reduced bottom padding */
+    padding-bottom: 80px; /* Reduced to give more space for content */
 }
 
 .video-background {
@@ -226,10 +226,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 160px);
-    padding-top: 120px; /* Increased padding to ensure "Fincas" is visible */
-    padding-bottom: 40px; /* Add bottom padding to prevent text cutoff */
+    justify-content: flex-start; /* Changed from center to flex-start */
+    min-height: calc(100vh - 200px); /* Increased available space */
+    padding-top: 140px; /* More top padding to clear header completely */
+    padding-bottom: 60px; /* More bottom padding */
 }
 
 .breadcrumb {
@@ -238,13 +238,12 @@ body {
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-size: clamp(2.5rem, 5.5vw, 5rem); /* Further reduced font size */
     font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
+    line-height: 1.0; /* Tighter line height */
+    margin-bottom: 0.3rem; /* Less margin */
     max-width: 900px;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
-    /* Ensure title is centered and visible */
     position: relative;
     z-index: 250;
     text-align: center;
@@ -255,18 +254,17 @@ body {
 
 .hero-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-size: clamp(1.6rem, 3.5vw, 3rem); /* Further reduced */
     font-style: italic;
     font-weight: 300;
     color: #d4a574;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem; /* Less margin */
     max-width: 700px;
     text-shadow: 1px 1px 15px rgba(0,0,0,0.8);
     background: linear-gradient(135deg, #d4a574 0%, #f4e4bc 50%, #d4a574 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* Center the subtitle */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -275,17 +273,14 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1rem; /* Smaller font */
+    line-height: 1.4; /* Tighter line height */
     max-width: 600px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Less margin */
     opacity: 0.9;
-    /* Ensure the description text is visible */
     position: relative;
     z-index: 201;
-    /* Add better text shadow for readability */
     text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
-    /* Center the description */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -352,7 +347,7 @@ body {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 140px; /* Adjusted for new layout */
+    bottom: 100px; /* Moved up significantly */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -596,16 +591,16 @@ body {
     .hero-content {
         padding: 0 1rem;
         text-align: center;
-        padding-top: 130px; /* Increased mobile padding for header */
-        padding-bottom: 60px; /* Add bottom padding on mobile */
+        padding-top: 150px; /* Even more padding on mobile */
+        padding-bottom: 80px; /* More bottom padding on mobile */
     }
     
     .hero-section {
-        padding-bottom: 160px; /* More padding on mobile */
+        padding-bottom: 120px; /* Adjusted for mobile */
     }
     
     .scroll-indicator {
-        bottom: 180px; /* Adjust for mobile */
+        bottom: 140px; /* Adjust for mobile */
     }
     
     .hero-nav-container {
