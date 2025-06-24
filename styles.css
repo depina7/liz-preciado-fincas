@@ -19,8 +19,8 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
     padding: 1rem 0;
     transition: all 0.3s ease;
 }
@@ -131,6 +131,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    /* Add padding to prevent content from being covered */
+    padding-bottom: 160px;
 }
 
 .video-background {
@@ -221,22 +223,18 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     color: white;
-    z-index: 10;
+    z-index: 200; /* Increased z-index to ensure it's above other elements */
+    position: relative; /* Added relative positioning */
+    /* Center the content vertically and ensure visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+    padding-top: 80px; /* Reduced padding to show full content */
 }
 
 .breadcrumb {
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
-}
-
-.breadcrumb a {
-    color: white;
-    text-decoration: none;
-}
-
-.breadcrumb span {
-    margin: 0 0.5rem;
+    display: none; /* Hide breadcrumb to fix the Colombia text issue */
 }
 
 .hero-title {
@@ -247,6 +245,13 @@ body {
     margin-bottom: 1rem;
     max-width: 900px;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+    /* Ensure title is centered and visible */
+    position: relative;
+    z-index: 250;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-subtitle {
@@ -262,6 +267,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Center the subtitle */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 250;
 }
 
 .hero-description {
@@ -270,6 +281,15 @@ body {
     max-width: 500px;
     margin-bottom: 3rem;
     opacity: 0.9;
+    /* Ensure the description text is visible */
+    position: relative;
+    z-index: 201;
+    /* Add better text shadow for readability */
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+    /* Center the description */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Premium CTA Buttons */
@@ -278,6 +298,11 @@ body {
     gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
+    /* Ensure buttons stay above other elements */
+    position: relative;
+    z-index: 201;
+    /* Center the buttons */
+    justify-content: center;
 }
 
 .cta-primary, .cta-secondary {
@@ -328,7 +353,7 @@ body {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 120px;
+    bottom: 180px; /* Moved up to avoid overlap with hero-nav */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -336,7 +361,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     animation: bounce 2s infinite;
-    z-index: 100;
+    z-index: 50; /* Reduced z-index to be below hero content */
 }
 
 .scroll-indicator span {
@@ -379,7 +404,7 @@ body {
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    z-index: 100;
+    z-index: 50; /* Reduced z-index to be below hero content */
 }
 
 .hero-nav-container {
@@ -571,7 +596,16 @@ body {
     
     .hero-content {
         padding: 0 1rem;
-        text-align: left;
+        text-align: center; /* Center align on mobile */
+        padding-top: 100px; /* Adjusted mobile padding for header */
+    }
+    
+    .hero-section {
+        padding-bottom: 200px; /* More padding on mobile */
+    }
+    
+    .scroll-indicator {
+        bottom: 220px; /* Adjust for mobile */
     }
     
     .hero-nav-container {
