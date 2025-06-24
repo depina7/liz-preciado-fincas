@@ -129,9 +129,9 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: flex-start; /* Changed to flex-start */
+    align-items: flex-start;
     justify-content: flex-start;
-    padding-bottom: 80px; /* Reduced to give more space for content */
+    padding-bottom: 40px; /* Minimal bottom padding to maximize content space */
 }
 
 .video-background {
@@ -226,10 +226,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Changed from center to flex-start */
-    min-height: calc(100vh - 200px); /* Increased available space */
-    padding-top: 140px; /* More top padding to clear header completely */
-    padding-bottom: 60px; /* More bottom padding */
+    justify-content: flex-start;
+    min-height: calc(100vh - 120px); /* Much more available space */
+    padding-top: 160px; /* Even more top padding */
+    padding-bottom: 100px; /* Much more bottom padding */
 }
 
 .breadcrumb {
@@ -238,10 +238,10 @@ body {
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5.5vw, 5rem); /* Further reduced font size */
+    font-size: clamp(2rem, 4.5vw, 4rem); /* Much smaller font size */
     font-weight: 400;
-    line-height: 1.0; /* Tighter line height */
-    margin-bottom: 0.3rem; /* Less margin */
+    line-height: 0.9; /* Very tight line height */
+    margin-bottom: 0.2rem; /* Minimal margin */
     max-width: 900px;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
     position: relative;
@@ -254,11 +254,11 @@ body {
 
 .hero-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.6rem, 3.5vw, 3rem); /* Further reduced */
+    font-size: clamp(1.3rem, 3vw, 2.5rem); /* Much smaller */
     font-style: italic;
     font-weight: 300;
     color: #d4a574;
-    margin-bottom: 1rem; /* Less margin */
+    margin-bottom: 0.8rem; /* Minimal margin */
     max-width: 700px;
     text-shadow: 1px 1px 15px rgba(0,0,0,0.8);
     background: linear-gradient(135deg, #d4a574 0%, #f4e4bc 50%, #d4a574 100%);
@@ -273,10 +273,10 @@ body {
 }
 
 .hero-description {
-    font-size: 1rem; /* Smaller font */
-    line-height: 1.4; /* Tighter line height */
-    max-width: 600px;
-    margin-bottom: 1.5rem; /* Less margin */
+    font-size: 0.9rem; /* Much smaller font */
+    line-height: 1.3; /* Very tight line height */
+    max-width: 500px; /* Narrower width */
+    margin-bottom: 1rem; /* Minimal margin */
     opacity: 0.9;
     position: relative;
     z-index: 201;
@@ -289,24 +289,22 @@ body {
 /* Premium CTA Buttons */
 .hero-cta-group {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem; /* Smaller gap */
+    margin-top: 1rem; /* Less margin */
     flex-wrap: wrap;
-    /* Ensure buttons stay above other elements */
     position: relative;
     z-index: 201;
-    /* Center the buttons */
     justify-content: center;
 }
 
 .cta-primary, .cta-secondary {
     display: inline-flex;
     align-items: center;
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 2rem; /* Smaller padding */
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Smaller font */
     letter-spacing: 0.5px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
