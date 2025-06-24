@@ -230,7 +230,7 @@ body {
     flex-direction: column;
     justify-content: center;
     min-height: calc(100vh - 160px);
-    padding-top: 80px; /* Reduced padding to show full content */
+    padding-top: 90px; /* Slightly increased to ensure header clearance */
 }
 
 .breadcrumb {
@@ -239,10 +239,10 @@ body {
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
     font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     max-width: 900px;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
     /* Ensure title is centered and visible */
@@ -256,11 +256,11 @@ body {
 
 .hero-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
     font-style: italic;
     font-weight: 300;
     color: #d4a574;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     max-width: 700px;
     text-shadow: 1px 1px 15px rgba(0,0,0,0.8);
     background: linear-gradient(135deg, #d4a574 0%, #f4e4bc 50%, #d4a574 100%);
@@ -276,10 +276,10 @@ body {
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 500px;
-    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-bottom: 2rem;
     opacity: 0.9;
     /* Ensure the description text is visible */
     position: relative;
@@ -296,7 +296,7 @@ body {
 .hero-cta-group {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     flex-wrap: wrap;
     /* Ensure buttons stay above other elements */
     position: relative;
